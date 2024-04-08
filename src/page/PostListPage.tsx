@@ -3,7 +3,6 @@ import {useQuery} from "react-query";
 import {Link} from "react-router-dom";
 
 export const PostListPage = () => {
-    console.log(window.location)
     const {fetchPosts} = usePost();
     const {data, isLoading} = useQuery('posts', fetchPosts, {
         staleTime: 1000 * 60 * 5,
